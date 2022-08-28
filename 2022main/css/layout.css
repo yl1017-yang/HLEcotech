@@ -4,7 +4,7 @@ html, body{font-size:16px;-webkit-tap-highlight-color:transparent !important}
 body{overflow-x:hidden;}
 .wrap{position:relative;}
 html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:100%;}
-
+/* .inner{width:1180px;} */
 
 /* 본문내용 */
 .main_container{position:relative;overflow:hidden;z-index:1;}

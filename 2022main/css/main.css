@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* 풀페이지 */
 .fullscreen{
     position: relative;
 }
@@ -27,8 +28,8 @@
     display:none;
 }
 
-/* 텍스트 */
-.fullscreen .swiper-slide .text_wrap {
+/* 풀페이지 - 텍스트 */
+/* .fullscreen .swiper-slide .text_wrap {
     position:absolute;
     left:12.5%;
     right:0;
@@ -77,9 +78,9 @@
 .fullscreen .swiper-slide-active .desc{
     opacity: 1;
     transform: translateY(0);
-}
+} */
 
-/* pagination */
+/* 풀페이지 - pagination */
 .fullscreen .swiper-pagination{width:50px;}
 .swiper-container-vertical>.swiper-pagination-bullets{left:5%;right:0;}
 .fullscreen .swiper-pagination-bullet{position:relative;background:#fff !important;opacity:.4 !important;}
