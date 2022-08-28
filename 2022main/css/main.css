@@ -35,11 +35,6 @@
     color:#fff;
     z-index:10;
 } 
-.fullscreen .swiper-slide.section03 .text_wrap, 
-.fullscreen .swiper-slide.section05 .text_wrap{
-    left:50%;
-    margin-left:12%;
-}
 .fullscreen .swiper-slide .tag {
     font-size:18px;
     font-weight:500;
@@ -113,25 +108,25 @@
 }
 
 /* 스크롤다운 */
-.fullscreen .scroll_down{position:absolute;width:24px;left:5%;bottom:4.5%;text-align:center;z-index:10;}
-.fullscreen .scroll_down i{display:block;position:relative;width:24px;height:36px;border:2px solid #fff;border-radius:15px;}
-.fullscreen .scroll_down i:after{content:'';position:absolute;left:50%;top:5px;margin-left:-2px;width:4px;height:8px;border-radius:2px;background:#fff;-webkit-animation:scrollDown 1.2s linear both infinite;animation:scrollDown 1.2s linear both infinite;}
-.fullscreen .scroll_down p{position:absolute;top:-20px;left:-2px;font-size:18px;font-weight:300;color:#fff;letter-spacing:0;transform:rotate(270deg);transform-origin:top left;white-space:nowrap;}
+.fullscreen .scroll_down{position:absolute;width:14px;right:5%;bottom:0%;text-align:center;z-index:10;}
+.fullscreen .scroll_down i{display:block;position:relative;width:2px;height:110px;background: rgba(255,255,255,0.3);}
+.fullscreen .scroll_down i:after{content:'';position:absolute;left:50%;top:0;margin-left:-1px;width:2px;height:30px;background:#fff;-webkit-animation:scrollDown 1.3s linear both infinite;animation:scrollDown 1.3s linear both infinite;}
+.fullscreen .scroll_down p{position:absolute;top:-20px;left:-8px;font-size:14px;font-weight:700;color:#fff;letter-spacing:0;transform:rotate(270deg);transform-origin:top left;white-space:nowrap;}
 
 @-webkit-keyframes scrollDown {
     0% {
-    	top: 5px;
+    	top: 0px;
     }
 	100% {
-		top: 20px;
+		top: 80px;
 	}
 }
 @keyframes scrollDown {
     0% {
-    	top: 5px;
+    	top: 0px;
     }
 	100% {
-		top: 20px;
+		top: 80px;
 	}
 }
 
@@ -142,10 +137,6 @@
 }
 
 @media all and (max-width:1440px) {
-    .fullscreen .swiper-slide.section03 .text_wrap, 
-    .fullscreen .swiper-slide.section05 .text_wrap{
-        margin-left:1%;
-    }
     .fullscreen .swiper-slide .text_wrap {
         left:8%;
     } 
@@ -154,11 +145,7 @@
 }
 
 @media all and (max-width:1024px) {
-    .fullscreen .swiper-slide.section03 .text_wrap, 
-    .fullscreen .swiper-slide.section05 .text_wrap{
-        left:8%;
-        margin-left:0;
-    }
+
 }
 
 @media all and (max-width:980px) {
