@@ -3,13 +3,11 @@ $(function() {
         //mainVertical();
     });	
 	mainVertical();
-	gnbMenu();
-	pointer();
+	mainVisual();
 	moNav();
-	moMember();
 });
 
-// 메인 - 서비스소개
+// 메인 - 메인비주얼
 function mainVertical() {
     var mainVertical = new Swiper('.fullscreen', {
         direction: 'vertical',
@@ -19,14 +17,14 @@ function mainVertical() {
         allowTouchMove:false,
         simulateTouch:false,
         touchStartPreventDefault:false,
-		watchSlidesProgress: true,
-		watchSlidesVisibility: true,
-		observer : true,
-		observeParents : true,
+				watchSlidesProgress: true,
+				watchSlidesVisibility: true,
+				observer : true,
+				observeParents : true,
         mousewheel: {
             releaseOnEdges: true,
-			invert: false,
-        },
+				invert: false,
+        	},
         mousewheelControl: true,
         pagination: {
             el: '.fullscreen .swiper-pagination',
@@ -63,18 +61,9 @@ function mainVertical() {
 			},
 			transitionEnd: function(){		
 			},
-			// reachEnd: function () {
-			// 	$('.swiper-pagination').css({"display":"none"})
-			// },
-			// slidePrevTransitionStart: function () {
-			// 	$('.swiper-pagination').css({"display":"block"})
-			// },
-			// slideChangeTransitionEnd: function(){
-			// 	alert(this.activeIndex);
-			// },
 		},
 
-        breakpoints: {
+    breakpoints: {
 			1024: {
 				allowTouchMove:true,
 				simulateTouch:true,
@@ -82,18 +71,80 @@ function mainVertical() {
 				touchStartPreventDefault:true,
 			},
 		},
-    });
+  });
+	// $('.btn_top_wrap a').click(function(){
+	// 	mainVertical.slideTo(0,600);
+	// });
+}
 
-    $('.btn_top_wrap a').click(function(){
-		mainVertical.slideTo(0,600);
+// 메인 - 메인비주얼
+function mainVisual() {
+	var mainslider = new Swiper('.mainvisual', {
+    speed: 1000,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
+    effect: "fade",
+    allowTouchMove : true,
+    slidesPerView: 1,
+    mousewheel: true,
+    keyboard: true,
+    observer: true,
+		observeParents: true,
+  	/* loop: true,  */
+    
+    scrollbar: {
+      el: ".mainvisual .swiper-scrollbar", 
+    },    
+    
+    on: {
+      init: function () {
+        $(".mainvisual .swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
+        $(".mainvisual .swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+      },
+      slideChangeTransitionStart: function () {
+        $(".mainvisual .swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
+      },
+      slideChangeTransitionEnd: function () {
+        $(".mainvisual .swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+      }
+      
+    },
+
+     pagination: {
+      el: '.mainvisual .swiper-pagination',      
+      type: 'fraction',
+      clickable : true,
+    },
+    
+    navigation: {
+      nextEl: '.mainvisual .swiper-button-next',
+      prevEl: '.mainvisual .swiper-button-prev',
+    },
+      
+  }); 
+  
+  $(".mainvisual .swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+  
+  // 메인 - 메인비주얼 Play/Stop
+	$('.mainvisual .swiper-play-pause').on("click", function () {
+			var $this = $(this);
+			if ($this.hasClass('pause')) {
+					$this.removeClass('pause').addClass('play').text('Play');
+					mainslider.autoplay.start();
+					/* mainslider.slideNext(); */
+					$(".mainvisual .swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+					
+			} else {
+			$this.addClass('pause').removeClass('play').text('Pause');
+					mainslider.autoplay.stop();
+					$(".mainvisual .swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
+			}
 	});
-	
 }
 
-// 상단메뉴 페이지인식
-function gnbMenu(depth1) {
-    $('.gnb li').eq(depth1-1).find('> a').addClass('on');
-}
+
 
 // 모바일 mo_nav_open 
 function moNav() {
@@ -109,38 +160,3 @@ function moNav() {
 	});
 }
 
-//모바일 - 반려인, 사장님 셀렉트박스
-function moMember() {
-	$(".mo_member dt a").click(function(e) {
-		e.preventDefault();
-		$(".mo_member dd ul").toggle();
-	});
-	$(".mo_member dd ul li a").click(function(e) {
-		e.preventDefault();
-		var text = $(this).html();
-		$(".mo_member dt a span").html(text);
-		$(".mo_member dd ul").hide();
-	});
-}
-
-//마우스 포인터
-function pointer() {
-	var cursor = $(".pointer");
-	$(document).mousemove(function (e) {
-		var mouseX = e.pageX;
-		var mouseY = e.pageY;
-		console.log(e.pageX, e.pageY);
-		cursor.css({
-			top: mouseY + "px",
-			left: mouseX + "px"
-		});
-
-		$("a, button, .swiper-pagination-bullet, input[type=submit]").on("mouseenter mouseleave", function (e) {
-			if (e.type == "mouseenter") {
-				cursor.addClass("on");
-			} else if (e.type == "mouseleave") {
-				cursor.removeClass("on");
-			}
-		});
-	})
-}

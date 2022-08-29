@@ -4,9 +4,14 @@ https://www.halla.co.kr/
 
 한라OMS
 https://www.hallaoms.co.kr/2020/main/
-https://yl1017-yang.github.io/HLEcotech/
+
 
 영문폰트 : Roboto / 국문 : NotoSansKr
+
+메인디자인
+https://yl1017-yang.github.io/HLEcotech/
+https://yl1017-yang.github.io/HLEcotech/psd/A%EB%A9%94%EC%9D%B8-1.jpg
+https://yl1017-yang.github.io/HLEcotech/psd/B%EB%A9%94%EC%9D%B8-1.jpg
 
 -----------------------------------------------------------
 참고사이트
