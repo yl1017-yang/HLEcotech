@@ -3,7 +3,7 @@
 html, body{font-size:16px;-webkit-tap-highlight-color:transparent !important}
 body{overflow-x:hidden;}
 .wrap{position:relative;}
-html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:100%;}
+html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
 /* .inner{width:1180px;} */
 
 /* 본문내용 */
@@ -62,13 +62,6 @@ html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:
 .footer .ft_info3 dt{display:inline-block;width:100px;vertical-align:top;}
 .footer .ft_info3 dd{display:inline-block;width:230px;}
 .footer .ft_info3 .ico_cacao{display:inline-block;width:26px;height:26px;background:url('/2022main/images/ico_cacao.png') no-repeat 50% 50%;margin:-3px 10px 10px 10px;vertical-align:top;}
-.footer .ft_sns{margin-top:31px;}
-.footer .ft_sns a{display:inline-block;width:180px;text-align:center;font-size:14px;color:#fff;padding:16px 0 16px 30px;border:2px solid #919193;border-radius:50px;}
-.footer .ft_sns a:hover{border-color:#c4c4c6;transition:all 1s ease;}
-.footer .ft_sns .ft_sns_android{background:url('/2022main/images/ico_android.png') no-repeat 32px 50%;}
-.footer .ft_sns .ft_sns_iso{background:url('/2022main/images/ico_iso.png') no-repeat 42px 50%;margin-left:30px;}
-
-.footer .ft_mo{display:none;position:absolute;top:0;right:20px;}
 
 /* 하단 */
 .footer_section{display:flex;width:100%;align-items:flex-end;}
@@ -157,12 +150,7 @@ html, body, .wrap, .main_container, .fullscreen, .usefullpage{width:100%;height:
     .footer .ft_info3 dt{width:22;}
     .footer .ft_info3 dd{width:73%;}
     .footer .ft_info3 .ico_cacao{width:20px;height:20px;background-size:100%;}
-    .footer .ft_sns{float:none;width:100%;margin-top:36px;text-align:center;}
-    .footer .ft_sns a{display:inline-block;width:37.3333vw;padding:12px 0 12px 15px;font-size:12px;}
-    .footer .ft_sns .ft_sns_android{background-size:15px;background-position:22px 50%;}
-    .footer .ft_sns .ft_sns_iso{margin:0 0 0 16px;background-size:15px;background-position:22px 50%;}
 
-    .footer .ft_mo{display:block;}
 }
 
 @media all and (max-width:480px) {
