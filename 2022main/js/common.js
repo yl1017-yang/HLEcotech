@@ -4,6 +4,7 @@ $(function() {
     });	
 	mainVertical();
 	mainVisual();
+	pcNav();
 	moNav();
 });
 
@@ -135,7 +136,22 @@ function mainVisual() {
 	});
 }
 
-
+// PC 네비
+function pcNav() {
+	$('.gnb ul li .dep2').hide();
+	// $('.gnb .gnb_bg').hide();
+	
+	$('.gnb > ul').on('mouseenter focusin', function(){
+			$(this).find('.dep1').addClass('on');
+			$(this).find('.dep2').stop().slideDown('300');
+			$('.gnb .gnb_bg').addClass('on');
+	});
+	$('.gnb > ul').on('mouseleave focusout',function(){
+			$(this).find('.dep1').removeClass('on');
+			$(this).find('.dep2').stop().slideUp('300');
+			$('.gnb .gnb_bg').removeClass('on');
+	});
+}
 
 // 모바일 mo_nav_open 
 function moNav() {
