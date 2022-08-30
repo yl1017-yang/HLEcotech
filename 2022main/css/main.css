@@ -85,8 +85,8 @@
 .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:50px 0 !important;}
 .fullscreen .swiper-pagination-bullet-active{background:#fff !important;opacity:1 !important;}
 
-.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:40px;height:40px;border-radius:50%;transition:all .3s;opacity:1;}
-.fullscreen .swiper-pagination-bullet-active:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:40px;height:40px;border-radius:50%;background-color:rgba(255,255,255,0.1);transition:all .3s;opacity:0;}
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:30px;height:30px;border-radius:50%;transition:all .3s;opacity:1;}
+.fullscreen .swiper-pagination-bullet-active:before{content:'';display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:30px;height:30px;border-radius:50%;background-color:rgba(255,255,255,0.1);transition:all .3s;opacity:0;}
 .swiper-container-vertical>.swiper-pagination-bullets span:last-child{display:none;}
 
 @-webkit-keyframes topRotate {
@@ -150,15 +150,16 @@
     transition: all 0.7s ease;
 } 
 .mainvisual .swiper-slide .title {
-    font-size: 64px;
+    font-size: 84px;
     font-weight: 600;
+    line-height: 110px;
 }
 .mainvisual .swiper-slide .title span {
     display: block;
 }
 .mainvisual .swiper-slide .text {
     font-size: 22px;
-    top: 55%;
+    top: 60%;
 } 
 .mainvisual .swiper-slide-active .title, 
 .mainvisual .swiper-slide-active .text {
@@ -167,6 +168,12 @@
 }
 .mainvisual .swiper-slide-active .text {
     transition-delay: 0.4s;
+}
+.mainvisual .swiper-slide .title.one {
+    font-size: 80px;
+}
+.mainvisual .swiper-slide .title.one span {
+    font-size: 120px;
 }
   
 /* 메인비주얼 - 유틸박스 */
@@ -222,10 +229,10 @@
 .mainvisual .swiper-play-pause {
     display: block;
     position: absolute;
-    bottom: 85px;
-    left: 380px;
-    width: 32px;
-    height: 32px;
+    bottom: 94px;
+    left: 388px;
+    width: 12px;
+    height: 12px;
     font-size:0;
     z-index:50;
     background-repeat: no-repeat;
@@ -233,10 +240,10 @@
     cursor: pointer;
 }
 .mainvisual .pause {
-    background-image: url("https://www.poscochemical.com/images/ico/ico_pause.png");
+    background-image: url('/2022main/images/icon/icon_stop_12.png');
 }
 .mainvisual .play {
-    background-image: url("https://www.poscochemical.com/images/ico/ico_play.png");
+    background-image: url('/2022main/images/icon/icon_play_12.png');
 }
 
 /* 메인비주얼 - 동적스크롤바 */

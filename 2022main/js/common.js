@@ -24,8 +24,8 @@ function mainVertical() {
 				observeParents : true,
         mousewheel: {
             releaseOnEdges: true,
-				invert: false,
-        	},
+						invert: false,
+        },
         mousewheelControl: true,
         pagination: {
             el: '.fullscreen .swiper-pagination',
@@ -84,12 +84,12 @@ function mainVisual() {
     keyboard: true,
     observer: true,
 		observeParents: true,
-  	/* loop: true,  */
+  	// loop: true,
     
     scrollbar: {
-      el: ".mainvisual .swiper-scrollbar", 
-    },    
-    
+      el: ".mainvisual .swiper-scrollbar",
+			//draggable: true,
+    },
     on: {
       init: function () {
         $(".mainvisual .swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
@@ -101,15 +101,12 @@ function mainVisual() {
       slideChangeTransitionEnd: function () {
         $(".mainvisual .swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
       }
-      
     },
-
      pagination: {
       el: '.mainvisual .swiper-pagination',      
       type: 'fraction',
       clickable : true,
-    },
-    
+    },    
     navigation: {
       nextEl: '.mainvisual .swiper-button-next',
       prevEl: '.mainvisual .swiper-button-prev',
@@ -139,18 +136,32 @@ function mainVisual() {
 // PC 네비
 function pcNav() {
 	$('.gnb ul li .dep2').hide();
-	// $('.gnb .gnb_bg').hide();
 	
 	$('.gnb > ul').on('mouseenter focusin', function(){
 			$(this).find('.dep1').addClass('on');
-			$(this).find('.dep2').stop().slideDown('300');
+			$(this).find('.dep2').stop().slideDown('300');			
+			$('.header .util a').addClass('on');
+			$('.header .logo a').addClass('on');
 			$('.gnb .gnb_bg').addClass('on');
+			//$(".gnb").find('.gnb_bg').stop(true, false).animate({"height":"400"}, 300);		
 	});
 	$('.gnb > ul').on('mouseleave focusout',function(){
 			$(this).find('.dep1').removeClass('on');
 			$(this).find('.dep2').stop().slideUp('300');
+			$('.header .util a').removeClass('on');
+			$('.header .logo a').removeClass('on');
 			$('.gnb .gnb_bg').removeClass('on');
+			//$(".gnb").find('.gnb_bg').stop(true, false).animate({"height":"0"}, 300);
 	});
+
+	$(".gnb > ul li").on('mouseenter focusin', function(){
+			$(this).find('.dep1').addClass('active');
+	});
+	$(".gnb > ul li").on('mouseleave focusout',function(){
+			$(this).find('.dep1').removeClass('active');
+	});
+	
+	
 }
 
 // 모바일 mo_nav_open 
