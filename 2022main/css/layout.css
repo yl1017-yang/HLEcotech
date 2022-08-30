@@ -47,21 +47,20 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
 .mo_nav_wrap .mo_nav_inner .mo_custmer{padding-top:15px;margin-top:20px;border-top:1px solid #3c3c3d;}
 .mo_nav_wrap .mo_nav_inner .mo_custmer dt{display:block;font-size:14px;color:#fff;font-weight:400;margin-top:35px;}
 .mo_nav_wrap .mo_nav_inner .mo_custmer dd{display:block;font-size:14px;color:#b9b9b9;font-weight:350;margin-top:10px;}
-.mo_nav_wrap .mo_nav_inner .mo_custmer .ico_cacao{display:inline-block;width:20px;height:20px;background:url('/2022main/images/ico_cacao.png') no-repeat 50% 50%/100%;margin:1px 6px 6px 6px;vertical-align:top;}
 
 /* 하단 */
-#footer_wrap{width:100%;height:100%;background:#232326;display:flex;justify-content:center;}
-.footer{position:relative;width:calc(100% - 160px);height:auto;display:flex;justify-content:space-between;margin:114px 0 0;padding-bottom:80px;font-size:16px;font-weight:400;color:#bcbcbd;}
-.footer dt{margin-bottom:10px;color:#fff;}
-.footer dd{margin-bottom:10px;}
-.footer .ft_info1{width:13%;}
-.footer .ft_info2{width:31%;}
-.footer .ft_info2 dt{display:inline-block;width:115px;vertical-align:top;}
-.footer .ft_info2 dd{display:inline-block;width:320px;}
-.footer .ft_info3{width:24%;}
-.footer .ft_info3 dt{display:inline-block;width:100px;vertical-align:top;}
-.footer .ft_info3 dd{display:inline-block;width:230px;}
-.footer .ft_info3 .ico_cacao{display:inline-block;width:26px;height:26px;background:url('/2022main/images/ico_cacao.png') no-repeat 50% 50%;margin:-3px 10px 10px 10px;vertical-align:top;}
+#footer_wrap{width:100%;height:100%;}
+.footer_category{position:relative;padding:50px 0;background:#eee;}
+.footer_category ul{display:flex;justify-content:space-between;width:1168px;margin:0 auto;}
+.footer_category ul li h3{font-size:18px;font-weight:700;color:#222;margin-bottom:5px;}
+.footer_category ul li a{display:block;padding:3px 0;}
+.footer_category ul li a:hover{color:#222;text-decoration:underline;}
+.footer{position:relative;width:1168px;margin:0 auto;padding-bottom:80px;}
+.footer .ft_logo{position:absolute;top:50px;right:0;width:128px;height:24px;background:url('/2022main/images/logo_black.svg') no-repeat 0 0/100%;}
+.footer .ft_info1{padding-top:50px;}
+.footer .ft_info1 a{display:inline-block;padding-right:20px;color:#444;font-weight:700;}
+.footer .ft_info2{margin-top:40px;font-size:14px;}
+.footer .ft_info2 .tel span{display:inline-block;margin-right:10px;letter-spacing:0.2px;}
 
 /* 하단 */
 .footer_section{display:flex;width:100%;align-items:flex-end;}
@@ -69,7 +68,7 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
 
 
 
-/* 반응형 */
+/********************* 반응형 ***********************/
 @media all and (max-width:1920px) {
 }
 
@@ -84,12 +83,6 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
     .header .gnb ul li a{padding:0 25px;}
     .header .gnb ul li a.on:after{width:70%;}
     .header .gnb ul li:nth-child(3) a:before{right:14%;}
-
-    /* 하단 */
-    .footer .ft_sns{margin-top:0;}
-    .footer .ft_sns a{display:block;}
-    .footer .ft_sns .ft_sns_iso{margin-left:0;margin-top:10px;}
-
 }
 
 @media all and (max-width:1024px) {
@@ -123,8 +116,6 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
     .footer{display:block;font-size:14px;overflow:hidden;}
     .footer .ft_info1{float:left;width:50%;}
     .footer .ft_info2{float:left;width:50%;}
-    .footer .ft_info3{float:left;width:50%;margin-top:30px;}
-    .footer .ft_sns{float:left;width:50%;margin-top:30px;}
 }
     
 
@@ -144,12 +135,6 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
     .footer{width:calc(100% - 40px);font-size:12px;margin-top:73px;}
     .footer .ft_info1{float:none;width:100%;}
     .footer .ft_info2{float:none;width:100%;margin-top:46px;}
-    .footer .ft_info2 dt{width:22vw;}
-    .footer .ft_info2 dd{width:73%;}
-    .footer .ft_info3{float:none;width:100%;margin-top:26px;}
-    .footer .ft_info3 dt{width:22;}
-    .footer .ft_info3 dd{width:73%;}
-    .footer .ft_info3 .ico_cacao{width:20px;height:20px;background-size:100%;}
 
 }
 

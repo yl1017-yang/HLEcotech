@@ -27,7 +27,7 @@
 }
 
 /* 풀페이지 - 텍스트 */
-.fullscreen .swiper-slide .text_wrap {
+/* .fullscreen .swiper-slide .text_wrap {
     position:absolute;
     left:12.5%;
     right:0;
@@ -76,7 +76,7 @@
 .fullscreen .swiper-slide-active .desc {
     opacity: 1;
     transform: translateY(0);
-}
+} */
 
 /* 풀페이지 - pagination */
 .fullscreen .swiper-pagination{width:50px;}
@@ -139,7 +139,7 @@
 .mainvisual .swiper-slide .title, 
 .mainvisual .swiper-slide .text {
     position: absolute;
-    width: 1168px;
+    width: 1180px;
     top: 30%;
     /* left: 0; */
     color: #fff;
@@ -172,7 +172,7 @@
 /* 메인비주얼 - 유틸박스 */
 .mainvisual .util-box{
     position: relative;
-    width: 1168px;
+    width: 1180px;
     left: 50% !important;
     transform:translateX(-50%);
     z-index:10;
@@ -273,15 +273,124 @@
 }
 
 /* 기업소개 */
-.companyinfo {
+.section03 {
     width: 100%;
     height: 100%;
     background: #00A0E7;
+}
+.companyinfo {
+    width: 1180px;
+    margin: 80px auto 0;
     display:flex;
     justify-content:center;
     align-items:center;
 }
-  
+.companyinfo .info_txt {
+    
+}
+.companyinfo .info_txt .title {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;;
+    color: #fff;
+}
+.companyinfo .info_txt .title span { 
+    font-size: 60px;
+}
+.companyinfo .info_txt .text {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+}
+.companyinfo .info_txt .btn_fill_gray {
+    margin-top: 90px;
+}
+.companyinfo .info_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.companyinfo .info_box .box {
+    position: relative;
+    width: 340px;
+    height: 260px;
+    margin: 0 0 40px 40px;
+    background: #fff;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.13);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.13);
+    transition: all 0.5s;
+}
+.companyinfo .info_box .box:hover {
+    background: #444;
+    color: #fff;
+}
+.companyinfo .info_box .box:hover .title {
+    color: #fff;
+}
+.companyinfo .info_box .box:after {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+}
+.companyinfo .info_box .box01:after {
+    background:url('/2022main/images/icon/icon_company01.png') no-repeat 0 0/100%;
+}
+.companyinfo .info_box .box02:after {
+    background:url('/2022main/images/icon/icon_company02.png') no-repeat 0 0/100%;
+}
+.companyinfo .info_box .box03:after {
+    background:url('/2022main/images/icon/icon_company03.png') no-repeat 0 0/100%;
+}
+.companyinfo .info_box .box04:after {
+    background:url('/2022main/images/icon/icon_company04.png') no-repeat 0 0/100%;
+}
+.companyinfo .info_box .box a {
+    display: block;
+    padding: 30px;
+}
+.companyinfo .info_box .box .title {
+    display: block;
+    font-size: 34px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+.companyinfo .info_box .box .text {
+    display: block;
+}
+
+/* 메인배너 */
+.mainbanner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.mainbanner li {
+    position: relative;
+    width: 50%;
+}
+.mainbanner .banner_box {
+    z-index: 10;
+}
+.mainbanner li img {
+    z-index: -1;
+}
+.mainbanner .banner_box .title {
+    display: block;
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 10px;
+}
+.mainbanner .banner_box .text {
+    display: block;
+    font-size: 20px;
+    color: #B2B2B2;    
+}
 
 /* 스크롤다운 */
 .fullscreen .scroll_down{position:absolute;width:14px;right:5%;bottom:0%;text-align:center;z-index:10;}

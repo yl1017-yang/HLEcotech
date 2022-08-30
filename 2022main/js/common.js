@@ -41,22 +41,13 @@ function mainVertical() {
 					$('.btn_top_wrap').fadeOut(500);
 				}
 				
-				var footHeight = $('.footer_section').outerHeight();
-				if($('.footer_section').hasClass('swiper-slide-visible')){
-					$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 70).addClass('on');
+				//footer_section pagenation, header 삭제
+				if ($('.footer_section').hasClass('swiper-slide-visible')) {
+					$('#header_wrap').addClass('on');
 					$('.swiper-pagination').css({'display':'none'})
-				}else{
-					$('.btn_top_wrap').css('position','fixed').css('bottom','70px').removeClass('on');
+				} else {
+					$('#header_wrap').removeClass('on');
 					$('.swiper-pagination').css({'display':'block'})
-				}
-
-				if ($(window).width() < 720) {
-					var footHeight = $('.footer_section').outerHeight();
-					if($('.footer_section').hasClass('swiper-slide-visible')){
-						$('.btn_top_wrap').css('position','fixed').css('bottom',footHeight + 40).addClass('on');
-					}else{
-						$('.btn_top_wrap').css('position','fixed').css('bottom','40px').removeClass('on');
-					}
 				}
 			},
 			transitionEnd: function(){		
