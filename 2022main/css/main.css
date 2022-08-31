@@ -240,10 +240,10 @@
     cursor: pointer;
 }
 .mainvisual .pause {
-    background-image: url('/2022main/images/icon/icon_stop_12.png');
+    background-image: url('../../2022main/images/icon/icon_stop_12.png');
 }
 .mainvisual .play {
-    background-image: url('/2022main/images/icon/icon_play_12.png');
+    background-image: url('../../2022main/images/icon/icon_play_12.png');
 }
 
 /* 메인비주얼 - 동적스크롤바 */
@@ -294,7 +294,7 @@
     transform: translateX(-50%);
     width: 1180px;
     height: 162px;
-    background:url('/2022main/images/bg_bi.png') no-repeat 0 0/100%;
+    background:url('../../2022main/images/bg_bi.png') no-repeat 0 0/100%;
     z-index: 0;
 }
 .companyinfo {
@@ -357,16 +357,16 @@
     height: 80px;
 }
 .companyinfo .info_box .box01:after {
-    background:url('/2022main/images/icon/icon_company01.png') no-repeat 0 0/100%;
+    background:url('../../2022main/images/icon/icon_company01.png') no-repeat 0 0/100%;
 }
 .companyinfo .info_box .box02:after {
-    background:url('/2022main/images/icon/icon_company02.png') no-repeat 0 0/100%;
+    background:url('../../2022main/images/icon/icon_company02.png') no-repeat 0 0/100%;
 }
 .companyinfo .info_box .box03:after {
-    background:url('/2022main/images/icon/icon_company03.png') no-repeat 0 0/100%;
+    background:url('../../2022main/images/icon/icon_company03.png') no-repeat 0 0/100%;
 }
 .companyinfo .info_box .box04:after {
-    background:url('/2022main/images/icon/icon_company04.png') no-repeat 0 0/100%;
+    background:url('../../2022main/images/icon/icon_company04.png') no-repeat 0 0/100%;
 }
 .companyinfo .info_box .box a {
     display: block;
