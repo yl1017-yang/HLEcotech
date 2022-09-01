@@ -37,11 +37,11 @@ function mainVertical() {
 			init: function(){
 			},
 			transitionStart: function(){
-				if(this.activeIndex != 0){
-					$('.btn_top_wrap').fadeIn(500);
-				}else{
-					$('.btn_top_wrap').fadeOut(500);
-				}
+				// if(this.activeIndex != 0){
+				// 	$('.btn_top_wrap').fadeIn(500);
+				// }else{
+				// 	$('.btn_top_wrap').fadeOut(500);
+				// }
 				
 				//footer_section pagenation, header 삭제
 				if ($('.footer_section').hasClass('swiper-slide-visible')) {
@@ -50,6 +50,16 @@ function mainVertical() {
 				} else {
 					$('#header_wrap').removeClass('on');
 					$('.swiper-pagination').css({'display':'block'})
+				}
+
+				if ($('.section02').hasClass('swiper-slide-visible')) {
+					$('.header .util a').addClass('on');
+					$('.header .logo a').addClass('on');
+					$('.gnb > ul').find('.dep1').addClass('on');
+				} else {
+					$('.header .util a').removeClass('on');
+					$('.header .logo a').removeClass('on');
+					$('.gnb > ul').find('.dep1').removeClass('on');
 				}
 			},
 			transitionEnd: function(){		
@@ -65,9 +75,6 @@ function mainVertical() {
 			},
 		},
   });
-	// $('.btn_top_wrap a').click(function(){
-	// 	mainVertical.slideTo(0,600);
-	// });
 }
 
 // 메인 - 메인비주얼
@@ -104,7 +111,7 @@ function mainVisual() {
       }
     },
      pagination: {
-      el: '.mainvisual .swiper-pagination',      
+      el: '.mainvisual .swiper-pagination',
       type: 'fraction',
       clickable : true,
     },    
@@ -158,7 +165,7 @@ function mainBusiness() {
 	$('.business_nav li').on("click", function () {
 			var index = $(this).index();
 			businessinfo.slideToLoop(index,300,false);
-	});	
+	});
 }
 
 // PC 네비
@@ -188,21 +195,4 @@ function pcNav() {
 	$(".gnb > ul li").on('mouseleave focusout',function(){
 			$(this).find('.dep1').removeClass('active');
 	});
-	
-	
 }
-
-// 모바일 mo_nav_open 
-// function moNav() {
-// 	$('.btn_nav_open').on('click',function(){
-// 		var href = $(this).attr("href");
-// 		$('.mo_nav_wrap' + href).addClass('on');
-// 		$('body').css({'height':$(window).height(), 'overflow':'hidden'});
-// 	});
-// 	$('.mo_nav_wrap .btn_close').on('click', function(e){
-// 		e.preventDefault();
-// 		$('.mo_nav_wrap').removeClass('on');
-// 		$('body').css({'height':$(window).height(), 'overflow':'auto'});
-// 	});
-// }
-
