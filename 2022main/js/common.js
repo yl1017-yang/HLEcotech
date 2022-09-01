@@ -9,7 +9,7 @@ $(function() {
 		moNav();
 });
 
-// 메인 - 메인비주얼
+// 메인 - 풀스크린
 function mainVertical() {
 		var mainVertical = new Swiper('.fullscreen', {
         direction: 'vertical',
@@ -50,15 +50,28 @@ function mainVertical() {
 										$('#header_wrap').removeClass('on');
 										$('.swiper-pagination').css({'display':'block'})
 								}
-
+								
+								//if(this.activeIndex == 1){
 								if ($('.section02').hasClass('swiper-slide-visible')) {
+										$('.gnb > ul').find('.dep1').addClass('on');	
 										$('.header .util a').addClass('on');
 										$('.header .logo a').addClass('on');
-										$('.gnb > ul').find('.dep1').addClass('on');
+
+										$('.gnb > ul').on('mouseleave focusout',function() {
+												$(this).find('.dep1').addClass('on');
+												$('.header .util a').addClass('on');
+												$('.header .logo a').addClass('on');
+										});
 								} else {
+										$('.gnb > ul').find('.dep1').removeClass('on');
 										$('.header .util a').removeClass('on');
 										$('.header .logo a').removeClass('on');
-										$('.gnb > ul').find('.dep1').removeClass('on');
+
+										$('.gnb > ul').on('mouseleave focusout',function() {
+												$(this).find('.dep1').removeClass('on');
+												$('.header .util a').removeClass('on');
+												$('.header .logo a').removeClass('on');
+										});
 								}
 						},
 						transitionEnd: function(){		
@@ -80,7 +93,7 @@ function mainVisual() {
 		var mainslider = new Swiper('.mainvisual', {
 				speed: 1000,
 				autoplay: {
-						delay: 7000,
+						delay: 6000,
 						disableOnInteraction: false,
 				},
 				effect: "fade",
@@ -142,12 +155,13 @@ function mainVisual() {
 // 메인 - 사업소개
 function mainBusiness() {
 		var businessinfo = new Swiper('.businessinfo', {
-				speed: 300,
+				speed: 400,
 				autoplay: {
-						delay: 7000,
+						delay: 4000,
 						disableOnInteraction: false,
 				},
 				slidesPerView: 1,
+				allowTouchMove : true,
 				loop: true,
 				observer: true,
 				observeParents: true,
