@@ -4,6 +4,7 @@ $(function() {
     });	
 	mainVertical();
 	mainVisual();
+	mainBusiness();
 	pcNav();
 	moNav();
 });
@@ -133,6 +134,33 @@ function mainVisual() {
 	});
 }
 
+// 메인 - 사업소개
+function mainBusiness() {
+		var businessinfo = new Swiper('.businessinfo', {
+			speed: 300,
+			autoplay: {
+				delay: 7000,
+				disableOnInteraction: false,
+			},
+			slidesPerView: 1,
+			loop: true,
+			observer: true,
+			observeParents: true,
+	});
+	
+	//탭메뉴
+	businessinfo.on('slideChange', function () {
+			$('.business_nav li').removeClass('on');
+			$('.business_nav li').eq(this.realIndex).addClass('on');
+			$('.business_text li').removeClass('on');
+    	$('.business_text li').eq(this.realIndex).addClass('on');
+	});
+	$('.business_nav li').on("click", function () {
+			var index = $(this).index();
+			businessinfo.slideToLoop(index,300,false);
+	});	
+}
+
 // PC 네비
 function pcNav() {
 	$('.gnb ul li .dep2').hide();
@@ -165,16 +193,16 @@ function pcNav() {
 }
 
 // 모바일 mo_nav_open 
-function moNav() {
-	$('.btn_nav_open').on('click',function(){
-		var href = $(this).attr("href");
-		$('.mo_nav_wrap' + href).addClass('on');
-		$('body').css({'height':$(window).height(), 'overflow':'hidden'});
-	});
-	$('.mo_nav_wrap .btn_close').on('click', function(e){
-		e.preventDefault();
-		$('.mo_nav_wrap').removeClass('on');
-		$('body').css({'height':$(window).height(), 'overflow':'auto'});
-	});
-}
+// function moNav() {
+// 	$('.btn_nav_open').on('click',function(){
+// 		var href = $(this).attr("href");
+// 		$('.mo_nav_wrap' + href).addClass('on');
+// 		$('body').css({'height':$(window).height(), 'overflow':'hidden'});
+// 	});
+// 	$('.mo_nav_wrap .btn_close').on('click', function(e){
+// 		e.preventDefault();
+// 		$('.mo_nav_wrap').removeClass('on');
+// 		$('body').css({'height':$(window).height(), 'overflow':'auto'});
+// 	});
+// }
 

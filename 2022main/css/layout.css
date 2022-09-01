@@ -82,6 +82,9 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
 @media all and (max-width:1920px) {
 }
 
+@media all and (max-width:1600px) {
+}
+
 @media all and (max-width:1440px) {
     /* 상단 */
     .gnb > ul{margin-left:50px;}
@@ -92,37 +95,39 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
     .footer{width:90%;}
 }
 
+@media all and (max-width:1280px) {
+}
+
 @media all and (max-width:1024px) {
 }
 
 @media all and (max-width:980px) {
     /* PC 네비 */
-    .header{display:block;height:70px;}
+    /* .header{display:block;} */
 
     /* MO 네비 */
-    .btn_nav_open{display:block;position:absolute;top:16px;right:0;}
-
+    /* .btn_nav_open{display:block;position:absolute;top:16px;right:0;} */
 }
 
 @media all and (max-width:800px) {
-    .footer .ft_logo{position:relative;margin-bottom:40px;}
-    .footer .ft_info2{margin-top:20px;}
+    /* .footer .ft_logo{position:relative;margin-bottom:40px;}
+    .footer .ft_info2{margin-top:20px;} */
 }
     
 
 /* 모바일 */
 @media all and (max-width:720px) {
-    .footer_category ul li h3{font-size:16px;}
-    .footer_category ul li a{font-size:14px;}
+    /* .footer_category ul li h3{font-size:16px;}
+    .footer_category ul li a{font-size:14px;} */
 }
 
 @media all and (max-width:640px) {
-    .footer_category{padding:20px 0 30px;}
+    /* .footer_category{padding:20px 0 30px;}
     .footer_category ul{flex-wrap:wrap;}
     .footer_category ul li{width:33.3%;margin-top:20px;}
     .footer_category ul li a{padding:1px 0;}
     .footer .ft_info1 a{font-size:14px;padding-right:10px;}
-    .footer .ft_info2{font-size:13px;}
+    .footer .ft_info2{font-size:13px;} */
 }
 
 @media all and (max-width:480px) {
