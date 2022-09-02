@@ -99,7 +99,7 @@ button:focus{outline-style:auto;outline: 2px solid -webkit-focus-ring-color;}
 a, button, [role=button], [role=link], [role=tab]{-webkit-touch-callout:none;}
 
 /* form select */
-input,textarea,select{box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:none;outline-style:none;border-radius:0;font-size:inherit;font-family:inherit;color:inherit;}
+input,textarea,select,button{box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:none;outline-style:none;border-radius:0;font-size:inherit;font-family:inherit;color:inherit;}
 input[type='text'], input[type='password']{resize:none;box-shadow:none !important;border-radius:0;outline:none;}
 input:checked{-webkit-appearance:checkbox;}
 input[type='text']::-ms-clear, input[type='tel']::-ms-clear{display:none;}
@@ -122,6 +122,7 @@ input[type='text']:focus, input[type='password']:focus,textarea:focus{border:2px
 :-moz-placeholder{font-size:inherit;color:#999;letter-spacing:-0.0375em;opacity:1;}
 ::-moz-placeholder{font-size:inherit;color:#999;letter-spacing:-0.0375em;opacity:1;}
 :-ms-input-placeholder{font-size:inherit;color:#999;letter-spacing:-0.0375em;opacity:1;}
+
 input[type='text']:focus::-webkit-input-placeholder{visibility:hidden}
 input[type='text']:focus:-moz-placeholder{visibility:hidden}
 input[type='text']:focus::-moz-placeholder{visibility:hidden}
