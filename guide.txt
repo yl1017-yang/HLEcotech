@@ -10,7 +10,7 @@ FTP 임시주소
 hlecotech.iwinv.net
 hlechtech / hleco!22
 
-
+https://www.woomi.co.kr/resources/kr/js/common.js
 -----------------------------------------------------------
 영문폰트 : Roboto / 국문 : NotoSansKr
 

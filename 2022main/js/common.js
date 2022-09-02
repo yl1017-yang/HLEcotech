@@ -1,14 +1,3 @@
-$(function() {
-    $(window).on('resize load', function () {
-        //mainVertical();
-    });	
-		mainVertical();
-		mainVisual();
-		mainBusiness();
-		pcNav();
-		moNav();
-});
-
 // 메인 - 풀스크린
 function mainVertical() {
 		var mainVertical = new Swiper('.fullscreen', {
@@ -190,7 +179,7 @@ function pcNav() {
 				$('.header .util a').addClass('on');
 				$('.header .logo a').addClass('on');
 				$('.gnb .gnb_bg').addClass('on');
-				//$(".gnb").find('.gnb_bg').stop(true, false).animate({"height":"400"}, 300);		
+				//$(".gnb").find('.gnb_bg').stop(true, false).animate({"height":"400"}, 300);
 		});
 		$('.gnb > ul').on('mouseleave focusout',function() {
 				$(this).find('.dep1').removeClass('on');
@@ -208,3 +197,14 @@ function pcNav() {
 				$(this).find('.dep1').removeClass('active');
 		});
 }
+
+$(function() {
+	$(window).on('resize load', function () {
+			//mainVertical();
+	});	
+	mainVertical();
+	mainVisual();
+	mainBusiness();
+	pcNav();
+	moNav();
+});
