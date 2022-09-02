@@ -27,8 +27,8 @@ html, body, .wrap, .main_container, .fullscreen{width:100%;height:100%;}
 .gnb > ul li > .dep2 li{float:none;}
 .gnb > ul li > .dep2 li a{display:block;color:#707070;padding:6px 0;}
 .gnb > ul li > .dep2 li a:hover{font-weight:500;color:#444;text-decoration:underline;}
-.gnb .gnb_bg{position:absolute;top:0;left:0;width:100%;height:0;background:#fff;z-index:0;transition:height 0.3s ease-in-out;}
-.gnb .gnb_bg.on{height:380px;box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.1);-webkit-box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.1);}
+.header .gnb_bg{position:absolute;top:0;left:0;width:100%;height:0;background:#fff;z-index:0;transition:height 0.3s ease-in-out;}
+.header .gnb_bg.on{height:380px;box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.1);-webkit-box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.1);}
 
 .header .util{position:absolute;top:40px;right:60px;display:flex;z-index:20;}
 .header .util a{display:inline-block;font-size:14px;color:#fff;padding-left:20px;}

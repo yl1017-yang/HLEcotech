@@ -178,7 +178,7 @@ function pcNav() {
 				$(this).find('.dep2').stop().slideDown('300');			
 				$('.header .util a').addClass('on');
 				$('.header .logo a').addClass('on');
-				$('.gnb .gnb_bg').addClass('on');
+				$('.header .gnb_bg').addClass('on');
 				//$(".gnb").find('.gnb_bg').stop(true, false).animate({"height":"400"}, 300);
 		});
 		$('.gnb > ul').on('mouseleave focusout',function() {
@@ -186,8 +186,15 @@ function pcNav() {
 				$(this).find('.dep2').stop().slideUp('300');
 				$('.header .util a').removeClass('on');
 				$('.header .logo a').removeClass('on');
-				$('.gnb .gnb_bg').removeClass('on');
+				$('.header .gnb_bg').removeClass('on');
 				//$(".gnb").find('.gnb_bg').stop(true, false).animate({"height":"0"}, 300);
+		});
+
+		$('.header').on('mouseenter focusin', function(){
+			//$(this).find('.gnb_bg').addClass('on');
+		});
+		$('.header').on('mouseleave focusout', function(){
+			//$(this).find('.gnb_bg').removeClass('on');
 		});
 
 		$(".gnb > ul li").on('mouseenter focusin', function() {
