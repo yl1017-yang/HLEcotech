@@ -346,15 +346,21 @@
     transform: translate(-30px, 0);
     opacity: 1;
 }
+
 .businessinfo-wrap .business_text .btn {
+    opacity: 0;
+}
+.businessinfo-wrap .business_text li.on .btn {
     position: absolute;
     top: 0;
     left: 0;
-    width: 840px;
+    width: 820px;
+    text-align: right;
     margin-top: 560px;
+    z-index: 10;
+    opacity: 1;
 }
-.businessinfo-wrap .business_text .btn_fill_gray {
-    float: right;
+.businessinfo-wrap .business_text li.on .btn_fill_gray {
     padding: 26px 120px 26px 76px;
 }
 
