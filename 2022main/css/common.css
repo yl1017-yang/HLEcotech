@@ -117,7 +117,7 @@ input[type='text']:focus::-moz-placeholder{visibility:hidden}
 input[type='text']:focus:-ms-input-placeholder{visibility:hidden}
 
 /* 버튼-기본형 */
-.btn_fill_gray{position:relative;display:inline-block;background:#444;font-size:18px;color:#fff;padding:16px 70px 16px 30px;transition:all 0.5s;}
+.btn_fill_gray{position:relative;display:inline-block;background:#444;font-size:18px;color:#fff;padding:15px 70px 15px 30px;transition:all 0.5s;transition-delay:0s !important;}
 .btn_fill_gray:after{content:'';position:absolute;top:48%;right:30px;width:26px;height:2px;background:#fff;}
 .btn_fill_gray:hover{background:#222;}
 
